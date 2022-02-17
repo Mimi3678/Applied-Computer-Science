@@ -7,7 +7,7 @@ Klient (frontend) kode ligger i mappen
 Tjener/server (backend) kode ligger i mappen 
 
 
-#Emnesammendrag
+# Emnesammendrag
 
 
 Introduksjon
