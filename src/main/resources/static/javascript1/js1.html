@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 1</title>
+    <script src="js1.js"></script>
+</head>
+<body>
+<!--Making a section to have a structrue, can also use div-->
+ <section>
+     <h1>JavaScript 1</h1>
+     <p>
+         <li>Funksjoner og variabler</li>
+         <li>Hendelser</li>
+         <li>Utskriftsmetoder</li>
+     </p>
+
+     <h1>Ukesoppgaver - uke 2</h1>
+     <h2>Oppgave 1</h2>
+     <p>Lag en HTML-knapp som kaller en JavaScript-funksjon som viser "Hei verden"
+         på en blank side via "document.write". Bruk hendelsen "onClick" på knappen.</p>
+    <button onclick="helloWorld()">Trykk meg!</button>
+
+     <h2>Oppgave 2</h2>
+     <p>Gjør om oppgave 1 til å vise en "alert"-boks når knappen trykkes.</p>
+     <button onclick="helloAlert()">Trykk meg</button>
+
+     <h2>Oppgave 3</h2>
+     <p>Lag et input-felt i en HTML-side. Lag et JavaScript som leser dataene fra
+         input-feltet når det er endringer i feltet (hendelsen "onChange")
+         og som skriver disse dataene ut på en blank side med "document.write".
+         Funksjonen som kalles ved "onChange" skal ta en inn-parameter,
+         som er verdien av input-feltet.</p>
+     <label for="name">Skriv inn navnet ditt:</label>
+     <input onchange="write(this.value)" type="text" id="name" value=""/>
+
+     <h2>Oppgave 4</h2>
+     <p>Endre oppgave 3 ved å legge ut en "pop-up/alert"-boks
+         som skal inneholde teksten fra input-feltet.</p>
+     <!--lage input-felt i en html-side-->
+     <label for="inn">Skriv inn navnet ditt</label>
+     <input onchange="visNavn(this.value)" type="text" id="inn">
+
+ </section>
+
+</body>
+</html>
