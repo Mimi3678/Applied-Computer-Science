@@ -41,6 +41,39 @@
      <label for="inn">Skriv inn navnet ditt</label>
      <input onchange="visNavn(this.value)" type="text" id="inn">
 
+     <h2>Oppgave 5</h2>
+     <p>Utvid oppgave 4 med å skrive informasjonen fra input-feltet
+         til "console.log". Sjekk at dataene blir skrevet til loggen.</p>
+     <form>
+         Skriv inn ditt navn: <input onchange="writeConsole(this.value);" type="text" value=""/>
+     </form>
+
+     <h2>Ekstraoppgaver</h2>
+     <h2>Oppgave 6</h2>
+     <p>Utvid oppgave 3 ved å gi et farge til teksten som vises på blank side.</p>
+     <label for="skriv">Skriv inn navnet ditt: </label>
+     <input type="text" onchange="inputFarge(this.value);" id="skriv"/>
+
+
+     <h2>Oppgave 7</h2>
+     <p>Utvid oppgave 4 ved å vise input i alert boks i store bokstaver.</p>
+     <label for="innStor">Skriv inn navn:</label>
+     <input type="text" onchange="inputStor(this.value);" id="innStor">
+
+     <h2>Oppgave 8</h2>
+     <p>Lag et knapp som skriver tall “1” til console (bruk console.log) hver gang den trykkes.</p>
+     <button onclick="visMelding()">Log tall 1</button>
+
+     <h2>Oppgave 9</h2>
+     <p>Utvid oppgave 8 slik at den skriver til console antall ganger knapp ble trykket. (Tell opp fra 1)</p>
+     <button onclick="tellOpp()">Tell antall click</button>
+
+     <h2>Oppgave 10</h2>
+     <p>Endre oppgave 9 ved å legge til en melding til console slik at den viser
+         "Du har trykket på knappen X ganger" (hvor X er antall ganger knappen ble trykket på).</p>
+     <button onclick="tellMelding()">Melding om antall click</button>
+
+
  </section>
 
 </body>
