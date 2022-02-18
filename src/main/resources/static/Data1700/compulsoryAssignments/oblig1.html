@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compulsory Assignment 1</title>
+    <!--link til JavaScript-filen-->
+    <script src="oblig1.js"></script>
+    <script type="text/javascript"></script>
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+
+<table>
+    <!--Lager nedtrekksliste for å velge film-->
+    <tr>
+        <td>Velg film:</td>
+        <td><select id="filmer">
+            <option>Velg film her</option>
+            <option>Spider-Man: No way home</option>
+            <option>Encanto</option>
+            <option>Tre Nøtter til Askepott</option>
+            <option>The Father</option>
+            <option>The Eternals</option>
+        </select>
+        </td>
+
+    <tr>
+        <td>Antall</td>
+        <td><input type="text" id="innAntall" style="width: 20px;" /></td>
+        <td><div id="feilAntall" style="color: red;"></div></td>
+    </tr>
+
+    <tr>
+        <td>Fornavn</td>
+        <td><input type="text" id="innFornavn" /></td>
+        <td><div id="feilFornavn" style="color: red;"></div></td>
+    </tr>
+
+    <tr>
+        <td>Etternavn</td>
+        <td><input type="text" id="innEtternavn" /></td>
+        <td><div id="feilEtternavn" style="color: red;"></div></td>
+    </tr>
+
+    <tr>
+        <td>Telefonnr</td>
+        <td><input type="text" id="innTelefonnr" /></td>
+        <td><div id="feilTelefonnr"  style="color: red;"></div></td>
+    </tr>
+
+    <tr>
+        <td>Epost</td>
+        <td><input type="text" id="innEpost" /></td>
+        <td><div id="feilEpost"  style="color: red;"></div></td>
+    </tr>
+
+    </table>
+    <!--Lage button for -> kjøp billett-->
+    <button onclick="kjopbillett()">Kjøp billett</button><br/>
+
+    <h2>Alle Billetter</h2>
+    <div id="billettRegister"></div>
+
+    <!-- Lage button for -> slett alle billettene-->
+    <button onclick="slettbillett()">Slett alle billettene</button>
+
+
+</body>
+</html>
