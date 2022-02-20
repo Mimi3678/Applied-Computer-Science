@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Klient/Server - Spring2</title>
+    <script type="text/javascript"></script>
+    <script src="motorvogn.js"></script>
+</head>
+<body>
+    <h1>Ukesoppgave</h1>
+    <h2>Motorvogn Register</h2>
+
+    <table>
+        <tr>
+            <tr>Eiers personnummer</tr><tr>Eiers navn</tr><tr>Eiers adresse</tr></br>
+            <tr><input type="text" id="personNummer"></tr>
+            <tr><input type="text" id="eiersNavn"></tr>
+            <tr><input type="text" id="eiersAdresse"></tr>
+        </tr> </br>
+
+        <tr>
+            <tr>Kjennetegn</tr><tr>Bilmerke</tr><tr>Biltype</tr></br>
+        <tr><input type="text" id="kjennetegn"></tr>
+        <tr><input type="text" id="merke"></tr>
+        <tr><input type="text" id="type"></tr>
+        </tr>
+    </table></br>
+    <button onclick="registrer()">Registrer</button></br>
+    <div id="start"></div>
+
+    <br><button onclick="slettAlle()">Slett alle</button>
+    <div id="end"></div>
+
+</body>
+</html>

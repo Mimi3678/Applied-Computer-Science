@@ -1,8 +1,8 @@
-package com.mimidev.webprograming.klientTjener1.service;
+package com.mimidev.webprograming.spring1.service;
 
 
-import com.mimidev.webprograming.klientTjener1.model.Amount;
-import com.mimidev.webprograming.klientTjener1.model.Currency;
+import com.mimidev.webprograming.spring1.model.Amount;
+import com.mimidev.webprograming.spring1.model.Currency;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.mimidev.webprograming.klientTjener1.service;
+package com.mimidev.webprograming.spring1.service;
 
 
 import org.springframework.stereotype.Service;

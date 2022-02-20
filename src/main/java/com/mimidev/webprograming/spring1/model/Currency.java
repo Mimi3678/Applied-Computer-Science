@@ -1,4 +1,4 @@
-package com.mimidev.webprograming.klientTjener1.model;
+package com.mimidev.webprograming.spring1.model;
 
 public class Currency {
     private String currency;

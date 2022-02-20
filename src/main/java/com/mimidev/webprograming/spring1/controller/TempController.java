@@ -1,7 +1,7 @@
-package com.mimidev.webprograming.klientTjener1.controller;
+package com.mimidev.webprograming.spring1.controller;
 
 
-import com.mimidev.webprograming.klientTjener1.service.TempService;
+import com.mimidev.webprograming.spring1.service.TempService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

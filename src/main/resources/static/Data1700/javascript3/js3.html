@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 3</title>
+    <script type="text/javascript"></script>
+    <script src="js3.js"></script>
+</head>
+<body>
+        <h1>JavaScript 3</h1>
+        <p>
+         <li></li>
+         <li></li>
+         <li></li>
+        </p>
+
+        <section>
+        <h1>Ukesoppgave - uke 4</h1>
+        <h2>Oppgave 1</h2>
+        <h2>REGISTRERING AV NAVN OG ALDER</h2>
+
+        <table>
+            <tr>
+                <td>Skriv inn Navn</td><td><input type="text" id="navn" /></td>
+            </tr>
+            <tr>
+                <td>Skriv inn Alder</td><td><input type="text" id="alder" /></td>
+            </tr>
+            <tr>
+                <td><button onclick="fullfor()">Fullfør her</button></td>
+            </tr>
+        </table>
+        </section>
+        <div id="output"></div>
+
+        <h2>Oppgave 2</h2>
+        Fahrenheit:
+        <input onchange="fahrenheitToCelsius(this.value)" id="fahrenheit" type="text" value=""/>
+
+        Celsius:
+        <input onchange="celsiusToFahrenheit(this.value)" id="celsius" type="text" value=""/>
+
+        <h2>Oppgave 3</h2>
+        <h2>Kalkulator</h2>
+        <input id="inn1" type="number" value=""/>
+        <input id="inn2" type="number" value=""/>
+        <button onclick="pluss();">+</button>
+        <button onclick="minus();">-</button>
+        <button onclick="gange();">*</button>
+        <button onclick="dele();">/</button>
+        <div id="kalk-output"> </div>
+
+        <h2>Oppgave 4</h2>
+        <h2>PersonRegister</h2>
+        <table>
+            <tr>
+                <td>Navn</td>
+                <td><input type="text" id="innNavn" /></td>
+            </tr>
+            <tr>
+                <td>Adresse</td>
+                <td><input type="text" id="innAdresse" /></td>
+            </tr>
+            <tr>
+                <td>Telefonnr</td>
+                <td><input type="text" id="innTelefonnr" /></td>
+            </tr>
+            <tr>
+                <td><button onclick="register();">Register</button> </td>
+            </tr>
+
+        </table>
+        <div id="personRegister"></div>
+
+        <h1>EkstraOppgaver</h1>
+        <h2>Oppgave 1</h2>
+        <label for="skrivInn">Todo liste:</label>
+        <input id="skrivInn" type="text" placeholder="Skriv inn gjøremål" onchange="leggTil()">
+
+        <h3>Todo:</h3>
+        <ul id="liste"></ul>
+
+        <h2>Oppgave 2</h2>
+        <label for="skrivInput">Todo liste:</label>
+        <input id="skrivInput" type="text" placeholder="skriv inn gjøremål" onchange="leggTilGjoremol()">
+
+        <h1>Gjøremål</h1>
+        <ul id="uferdig"></ul>
+        <ul id="ferdig"></ul>
+
+        <h2>Oppgave 3</h2>
+        <button onclick="skrivUtOppgaver()">Ta test!</button>
+        <ul id="list"></ul>
+
+</body>
+</html>
