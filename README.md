@@ -1,13 +1,2 @@
-# Web Programing
-Løsningsforsalg/hjelp til oppgaver i DATA1700-1 21V Webprogrammering ved OsloMet
-
-Deployering av repo: 
-
-Klient (frontend) kode ligger i mappen
-Tjener/server (backend) kode ligger i mappen 
-
-
-# Emnesammendrag
-
-
-Introduksjon
+#Applied computer science
+This website is an overview of the courses I have attended during my three years as a computer science student at OsloMet.
