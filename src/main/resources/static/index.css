@@ -6,7 +6,13 @@
     text-align: center;
 }
 
+.infostart {
+    text-align: center;
+}
 
+.infofooter {
+    text-align: center;
+}
 .imagesLink {
     align-content: space-between;
     padding-bottom: 25px;
