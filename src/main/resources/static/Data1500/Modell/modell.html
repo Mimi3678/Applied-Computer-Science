@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fra Modell til databaser</title>
+</head>
+<body>
+<h1>Fra modell til databaser</h1>
+<section class="intro">
+    <h2>Læringsmål</h2>
+    <p>
+    <li>Kunne oversette datamodeller til logisk tabellstruktur</li>
+    <li>Kunne normalisere tabeller for å unngå redundans (dobbeltlagring)</li>
+    <li>Forstå hvordan views kan brukes i databasedesign</li>
+
+    </p>
+</section>
+
+<section class="area1">
+    <h3>Entiteter og attributter</h3>
+    <p>
+        <li>Hver entitet blir til en tabell med samme navn</li>
+        <li>Hvert attributt blir til en kolonne med samme navn</li>
+        <li>Logisk diagram svarer direkte til tabellstruktur: Ansatt(AnsNr, Fornavn, Etternavn, Stilling)</li>
+    </p>
+    <img src="">
+</section>
+
+<section class="area2">
+    <h3>En til mange forhold</h3>
+    <img src="">
+    <p>Identifikatorene på “en-siden” kopieres og legges til som kolonner på “mange-siden”,...</li>
+    ... og blir fremmednøkler (FK) tilbake mot “en-siden”.</p>
+    <img src="">
+</section>
+
+<section>
+    <h3>Mange til mange forhold</h3>
+    <img src="">
+    <p>
+        <li>Mange-til-mange forhold blir til «koblingstabeller».</li>
+        <li>Identifikatorene for de involverte entitetene blir til en sammensatt primærnøkkel.</li>
+        <li>Kan løse opp slike forhold i modellen – eller gjøre det ved generering av database.</li>
+    </p>
+    <img src="">
+</section>
+
+<section>
+    <h3>Løse opp mange til mange forhold</h3>
+    <p>
+        <li>Løs opp mange-til-mange forhold hvis du ønsker å
+    knytte attributter til forholdet.</li>
+    <li>Koblingsentiteten vil inngå i to mange-til-en forhold.</li>
+    <li>Vi får normalt en svak koblingsentitet (som vist under).</li>
+    <li>Det er også mulig å innføre et løpenummer som primærnøkkel i en koblingsentitet. Et ikke identifiserende mange-til-mange forhold vil føre fram til en slik løsning.</li>
+    </p>
+    <img src="">
+</section>
+</body>
+</html>
