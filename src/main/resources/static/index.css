@@ -1,31 +1,52 @@
-.headingIntro {
-    text-align: center;
-    font-size: 45px;
-    font-family: 'Rampart One', cursive;
-}
-.info1 {
-    text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.firstyear {
-    text-align: center;
-    font-family: 'Rampart One', cursive;
-}
 
-.infostart {
-    text-align: center;
-}
+/*Extra small devices (phones, 600px and down)*/
+@media only screen and (max-width: 600px) {
 
-.infofooter {
-    text-align: center;
-}
-.imagesLink {
-    align-content: space-between;
-    padding-bottom: 25px;
-    margin: 25px;
-    text-align: center;
 }
 
 
-.webimg {
+/*Small devices (portraits tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px) {
+
+}
+
+
+/*Medium devices (landscape tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {
+
+}
+
+
+/*Large devices (laptops/desktops, 992px and up)*/
+@media only screen and (min-width: 992px) {
+    .headingIntro {
+        text-align: center;
+        font-size: 45px;
+        font-family: 'Rampart One', cursive;
+    }
+
+    .info1 {
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .firstyear {
+        text-align: center;
+        font-family: 'Rampart One', cursive;
+    }
+
+    .infostart {
+        text-align: center;
+    }
+
+    .infofooter {
+        text-align: center;
+    }
+
+    .imagesLink {
+        align-content: space-between;
+        padding-bottom: 25px;
+        margin: 25px;
+        text-align: center;
+    }
 }
