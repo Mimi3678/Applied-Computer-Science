@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <title>Klient/Server - Spring2</title>
     <script type="text/javascript"></script>
-    <script src="motorvogn.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1>Ukesoppgave</h1>
-    <h2>Motorvogn Register</h2>
+<h1>Ukesoppgave</h1>
+<h2>Motorvogn Register</h2>
+<table>
+    <tr>
+        <td>Eiers personnummer</td><td>Eiers navn</td><td>Eiers adresse</td>
+    </tr>
+    <td><input type="text" id="personnr"></td>
+    <td><input type="text" id="navn"></td>
+    <td><input type="text" id="adresse"></td>
+    </tr>
+    <tr>
+        <td>Kjennetegn</td><td>Bilmerke</td><td>Biltype</td>
+    </tr>
+    <tr>
+        <td><input type="text" id="kjennetegn"></td>
+        <td><input type="text" id="merke"></td>
+        <td><input type="text" id="type"></td>
+    </tr>
+</table>
+<button onclick="registrerMotor()">Registrer</button></br>
+Alle bilene:
+<div id="bilene"></div>
+<button onclick="slettMotorvogn()">Slett alle</button></br>
 
-    <table>
-        <tr>
-            <tr>Eiers personnummer</tr><tr>Eiers navn</tr><tr>Eiers adresse</tr></br>
-            <tr><input type="text" id="personNummer"></tr>
-            <tr><input type="text" id="eiersNavn"></tr>
-            <tr><input type="text" id="eiersAdresse"></tr>
-        </tr> </br>
-
-        <tr>
-            <tr>Kjennetegn</tr><tr>Bilmerke</tr><tr>Biltype</tr></br>
-        <tr><input type="text" id="kjennetegn"></tr>
-        <tr><input type="text" id="merke"></tr>
-        <tr><input type="text" id="type"></tr>
-        </tr>
-    </table></br>
-    <button onclick="registrer()">Registrer</button></br>
-    <div id="start"></div>
-
-    <br><button onclick="slettAlle()">Slett alle</button>
-    <div id="end"></div>
+<script src="motorvogn.js"></script>
 
 </body>
 </html>

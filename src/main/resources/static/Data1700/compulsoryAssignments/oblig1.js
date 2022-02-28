@@ -123,6 +123,7 @@ function kjopbillett() {
 function slettbillett() {
     listeFilm = [];
 
+
     //tømme utskriftene
     document.getElementById("billettRegister").innerHTML = "<table><tr>" +
         "<th>Film</th> <th>Antall</th> <th>Fornavn</th> <th>Etternavn</th>" +
