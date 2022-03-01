@@ -1,4 +1,4 @@
-package com.mimidev.webprograming.spring2.model;
+package com.mimidev.webprograming.spring2;
 
 public class Motorvogn {
 

@@ -14,8 +14,8 @@ function registrerMotor() {
 
     //sende det til server
     //lagre informasjon POST (hente alle objekter som er lagret inn på server)
-    $.post("lagreInformasjon", motorvogn, function () {
-        henteInformasjon();
+    $.post("/lagre", motorvogn, function () {
+        hentAlle();
     });
 
     //Tømme input-feltene
@@ -27,8 +27,8 @@ function registrerMotor() {
     $("#type").val("");
 }
 //implementere hentInformasjon som funksjon, fra server GET
-function henteInformasjon() {
-    $.get("/henteInformasjon", function(biler) {
+function hentAlle() {
+    $.get("/hentAlle", function(biler) {
         formaterData(biler);
     });
 }
@@ -50,7 +50,7 @@ function formaterData(biler) {
 //Delete Button
 function slettMotorvogn() {
     $.get ("/slettAlle", function() {
-        henteInformasjon();
+        hentAlle();
     });
 
 }
