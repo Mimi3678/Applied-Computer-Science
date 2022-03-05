@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Visualisering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="adse3200.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 
 <header class="headerinfo">
-    <h1>Welcome to visualization</h1>
-    <h2>Overview of subjects material - 2022</h2>
+    <div class="startinfo">
+        <h1>Welcome to visualization</h1>
+        <h2>Overview of subjects material - 2022</h2>
+    </div>
     <div class="linksnav">
         <a href="../index.html">Home</a>
         <a href="../Data1500/database.html">Databases</a>
@@ -17,33 +22,79 @@
     </div>
 </header>
 
+<h3 class="modules">Modules</h3>
 
-<h3>Modules</h3>
-<ol class="number-list">
-    <a href="introduction/introduction.html">
-        <li>Introduction</li>
-    </a>
-    <a href="Datasett/datasett.html">
-        <li>Datasett, variable og typer</li>
-    </a>
-    <a href="Datarepresentasjon/datarepresentasjon.html">
-        <li>Datarepresentasjon og kompleksitet</li>
-    </a>
-    <a href="Data-analyse/dataanalyse.html">
-        <li>Data-analyse og statistiske metoder</li>
-    </a>
-    <a href="Visuell persepsjon/visuellperspesjon.html">
-        <li>Visuell persepsjon</li>
-    </a>
-    <a href="flerdimensjondata/flerdimensjonaledata.html">
-        <li>Flerdimensjonale Data</li>
-    </a>
-</ol>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Introduction</div>
+                <div class="card-body">
+                    <h5 class="card-title">Intro - first class</h5>
+                    <a class="linknav" href="introduction/introduction.html">Introduction</a>
+                </div>
+            </div>
 
-<footer>
-    <p class="info">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Datasett, variabler og typer</div>
+                <div class="card-body">
+                    <h5 class="card-title">Datasett, variabler og typer</h5>
+                    <a class="linknav" href="Datasett/datasett.html">Datasett</a>
+                </div>
+            </div>
+            </div>
+
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Datarepresentasjon & kompleksitet</div>
+                <div class="card-body">
+                    <h5 class="card-title">Datarepresentasjon</h5>
+                    <a class="linknav" href="Datarepresentasjon/datarepresentasjon.html">Datarepresentasjon</a>
+                </div>
+            </div>
+
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Data-analyse</div>
+                <div class="card-body">
+                    <h5 class="card-title">Data-analyse</h5>
+                    <a class="linknav" href="Data-analyse/dataanalyse.html">Data-analyse og statistiske metoder</a>
+                </div>
+            </div>
+            </div>
+
+                <div class="col-sm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Visuell Persepsjon</div>
+                <div class="card-body">
+                    <h5 class="card-title">Visuell Persepsjon</h5>
+                    <a  class="linknav" href="Visuell persepsjon/visuellperspesjon.html">Visuell Persepsjon</a>
+                </div>
+            </div>
+
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Flerdimensjonale Data</div>
+                <div class="card-body">
+                    <h5 class="card-title">Flerdimensjonale Data</h5>
+                    <a  class="linknav" href="flerdimensjondata/flerdimensjonaledata.html">Flerdimensjonale Data</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<footer id="footter">
+    <p class="infofooter">
         Developed by: Miriam Sarpong | Copyright &copy; MimiDev
     </p>
 </footer>
+
+
+
+
+
+
+
 </body>
 </html>

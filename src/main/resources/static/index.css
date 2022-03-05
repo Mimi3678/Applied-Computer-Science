@@ -66,4 +66,10 @@ html,body {
         margin-top: -100px;
         clear: both;
     }
+
+    .linksnav {
+        text-align: center;
+        padding: 15px;
+    }
+
 }

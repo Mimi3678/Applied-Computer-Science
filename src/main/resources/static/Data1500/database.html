@@ -5,13 +5,16 @@
     <title>Databaser - vår2022</title>
     <link rel="stylesheet" href="database.css">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 
 <header class="headerinfo">
-    <h1>Welcome to Databases</h1>
-    <h2>Overview of subjects material - 2022</h2>
-    <div class="linksnav">
+    <div class="startinfo">
+        <h1>Welcome to Databases</h1>
+        <h2>Overview of subjects material - 2022</h2>
+    </div>
+    <div class="linkshead">
         <a href="../index.html">Home</a>
         <a href="../Data1500/database.html">Databases</a>
         <a href="../Adse3200/adse3200.html">Visualization</a>
@@ -19,30 +22,69 @@
     </div>
 </header>
 
-<h3>Modules</h3>
-<ol class="number-list">
-    <a href="introduction/intro.html">
-        <li>Introduction</li>
-    </a>
-    <a href="Tabeller/tabell.html">
-        <li>Lage og bruke tabeller</li>
-    </a>
-    <a href="Spørringer1/spørring1.html">
-        <li>Spørringer mot flere tabeller</li>
-    </a>
-    <a href="Datamodellering/erModellering.html">
-        <li>Datamodellering med ER</li>
-    </a>
-    <a href="Modell/modell.html">
-        <li>Fra modell til databaser</li>
-    </a>
-</ol>
+<h3 class="modules">Modules</h3>
 
-<footer>
-    <p class="info">
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Introduction</div>
+                <div class="card-body">
+                    <h5 class="card-title">Databases</h5>
+                    <a class="linknav" href="introduction/intro.html">Introduction to databases</a>
+                </div>
+            </div>
+            </div>
+
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Tabeller</div>
+                <div class="card-body">
+                    <h5 class="card-title">Lage og bruke tabeller</h5>
+                    <a class="linknav" href="Tabeller/tabell.html">Tabeller</a>
+                </div>
+            </div>
+            </div>
+
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Spørringer</div>
+                <div class="card-body">
+                    <h5 class="card-title">Spørringer på spørringer</h5>
+                    <a class="linknav" href="Spørringer1/spørring1.html">Spørringer</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Datamodellering</div>
+                <div class="card-body">
+                    <h5 class="card-title">Datamodellering med ER</h5>
+                    <a class="linknav" href="Datamodellering/erModellering.html">Datamodellering</a>
+                </div>
+            </div>
+            </div>
+
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Modell/databaser</div>
+                <div class="card-body">
+                    <h5 class="card-title">Fra modell til databaser</h5>
+                    <a  class="linknav" href="Modell/modell.html">Modell/databaser</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer id="footter">
+    <p class="infofooter">
         Developed by: Miriam Sarpong | Copyright &copy; MimiDev
     </p>
 </footer>
+
 
 </body>
 </html>
