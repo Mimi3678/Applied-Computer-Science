@@ -1,4 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
+html,body {
+    height: 100%;
+}
 /*Extra small devices (phones, 600px and down)*/
 @media only screen and (max-width: 600px) {
 
@@ -38,15 +45,25 @@
     .infostart {
         text-align: center;
     }
-
     .infofooter {
         text-align: center;
     }
 
-    .imagesLink {
+    #imagesLink {
+        min-height: 100%;
         align-content: space-between;
         padding-bottom: 25px;
         margin: 25px;
         text-align: center;
+    }
+    #main {
+        overflow: auto;
+        padding-bottom: 100px;
+    }
+    #footter {
+        position: relative;
+        height: 100px;
+        margin-top: -100px;
+        clear: both;
     }
 }

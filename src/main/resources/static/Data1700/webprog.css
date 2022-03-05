@@ -1,0 +1,25 @@
+.startinfo {
+    text-align: center;
+}
+
+.modules {
+    padding: 35px;
+    margin: 5px;
+
+}
+
+.card-columns {
+    display: inline-block;
+}
+
+#footter {
+    position: relative;
+}
+
+.infofooter {
+    text-align: center;
+}
+
+.linknav {
+    color: black;
+}

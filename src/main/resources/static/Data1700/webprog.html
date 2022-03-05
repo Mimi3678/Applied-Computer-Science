@@ -4,70 +4,144 @@
     <meta charset="UTF-8">
     <title>Web programming</title>
     <link rel="stylesheet" href="webprog.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-<h1>Welcome to Web Programming</h1>
-<h2>Overview of subjects material - 2022</h2>
 
-<h3>Modules</h3>
-<ol class="number-list">
-    <a href="introduction/helloworld.html">
-        <li>Introduction</li>
-    </a>
-    <a href="javascript1/js1.html">
-        <li>JavaScript1</li>
-    </a>
-    <a href="javascript2/js2.html">
-        <li>JavaScript2</li>
-    </a>
-    <a href="javascript3/js3.html">
-        <li>JavaScript3</li>
-    </a>
-    <a href="jQuery/jquery.html">
-        <li>Introduction to jQuery</li>
-    </a>
-    <li>Introduction to klient & Server (Spring1)</li>
-    <ul>
-        <a href="spring1/temp.html">
-            <li>Temperatur</li>
-        </a>
-        <a href="spring1/load.html">
-            <li>Currency Calculator</li>
-        </a>
-        <a href="spring1/currency.html">
-            <li>Calculator</li>
-        </a>
-    </ul>
-    <a href="spring2/motorvogn.html">
-        <li>HTTP & saving data inn server (Spring2)</li>
-    </a>
-    <a href="styling/styling.html">
-        <li>Styling med Bootstrap</li>
-    </a>
-    <a href="spring3/spring3.html">
-        <li>Bruk av nedtrekkslisteer, radioknapper   (Spring 3)</li>
-    </a>
+<header class="startinfo">
+    <h1>Welcome to Web Programming</h1>
+    <h2>Overview of subjects material - 2022</h2>
+    <div class="linksnav">
+        <a href="../index.html">Home</a>
+        <a href="../Data1500/database.html">Databases</a>
+        <a href="../Adse3200/adse3200.html">Visualization</a>
+        <a href="../Data1700/webprog.html">Web Programing</a>
+    </div>
+</header>
+
+<h3 class="modules">Modules</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">Introduction</div>
+    <div class="card-body">
+        <h5 class="card-title">Hello World - first program</h5>
+        <a class="linknav" href="introduction/helloworld.html">My first program</a>
+    </div>
+</div>
+
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">javaScript 1</div>
+    <div class="card-body">
+        <h5 class="card-title">The world of javaScript</h5>
+        <a class="linknav" href="javascript1/js1.html">javaScript1</a>
+        <p class="card-text"><img src="images/8009-java-js.png"></p>
+    </div>
+</div>
+
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">javaScript 2</div>
+    <div class="card-body">
+        <h5 class="card-title">The world of javaScript</h5>
+        <a class="linknav" href="javascript2/js2.html">javaScript2</a>
+        <p class="card-text"><img src="images/8009-java-js.png"></p>
+    </div>
+</div>
+</div>
+
+ <div class="col-sm">
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">javaScript 3</div>
+    <div class="card-body">
+        <h5 class="card-title">The world of javaScript</h5>
+        <a class="linknav" href="javascript3/js3.html">javaScript3</a>
+        <p class="card-text"><img src="images/8009-java-js.png"></p>
+    </div>
+</div>
+
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">jQuery</div>
+    <div class="card-body">
+        <h5 class="card-title">Introduction to jQuery</h5>
+        <a  class="linknav" href="jQuery/jquery.html">jQuery</a>
+        <p class="card-text"><img src="images/282806_jquery_logo_icon%20(1).png"></p>
+    </div>
+</div>
+
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">Spring 1</div>
+    <div class="card-body">
+        <h5 class="card-title">Introduction to klient & Server</h5>
+            <a class="linknav" href="spring1/temp.html">
+                <li>Temperatur</li>
+            </a>
+            <a class="linknav" href="spring1/currency.html">
+                <li>Currency Calculator</li>
+            </a>
+            <a class="linknav" href="spring1/currency.html">
+                <li>Calculator</li>
+            </a>
+    </div>
+</div>
+ </div>
+
+        <div class="col-sm">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">Spring 2</div>
+    <div class="card-body">
+        <h5 class="card-title">HTTP & saving data inn server</h5>
+        <a  class="linknav" href="spring2/motorvogn.html">Spring 2</a>
+    </div>
+</div>
 
 
-    <li>Compulsory Assignments</li>
-    <ul>
-        <a href="compulsoryAssignments/oblig1.html">
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">Spring 3</div>
+    <div class="card-body">
+        <h5 class="card-title">Bruk av nedtrekkslister, radioknapper osv.</h5>
+        <a class="linknav" href="spring3/spring3.html">Spring 3</a>
+    </div>
+</div>
+
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">Bootstrap</div>
+    <div class="card-body">
+        <h5 class="card-title">Styling with Bootstrap</h5>
+        <a class="linknav" href="styling/styling.html">Bootstrap</a>
+    </div>
+</div>
+        </div>
+
+ <div class="col-sm">
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">Assignments/project</div>
+    <div class="card-body">
+        <h5 class="card-title">Compulsory Assignments</h5>
+        <a class="linknav" href="compulsoryAssignments/oblig1.html">
             <li>Assignment 1</li>
         </a>
-        <a href="compulsoryAssignments/oblig2.html">
+        <a class="linknav" href="compulsoryAssignments/oblig2.html">
             <li>Assignment 2</li>
         </a>
-        <a href="compulsoryAssignments/oblig3.html">
+        <a class="linknav" href="compulsoryAssignments/oblig3.html">
             <li>Assignment 3</li>
         </a>
-    </ul>
-    
-</ol>
+    </div>
+    </div>
+ </div>
 
-<footer>
-    <p class="info">
+    </div>
+</div>
+
+
+<footer id="footter">
+    <p class="infofooter">
         Developed by: Miriam Sarpong | Copyright &copy; MimiDev
     </p>
 </footer>
+
 </body>
 </html>
