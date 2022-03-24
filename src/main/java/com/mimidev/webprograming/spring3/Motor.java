@@ -8,6 +8,7 @@ public class Motor {
     private String merke;
     private String type;
 
+
     public Motor(String personnr, String navn, String adresse,
                String kjennetegn, String merke, String type) {
         this.personnr = personnr;
@@ -16,6 +17,7 @@ public class Motor {
         this.kjennetegn = kjennetegn;
         this.merke = merke;
         this.type = type;
+
     }
 
     public Motor() {
@@ -36,12 +38,14 @@ public class Motor {
     public void setKjennetegn (String kjennetegn) {
         this.kjennetegn = kjennetegn;
     }
+
     public void setMerke (String merke) {
         this.merke = merke;
     }
     public void setType (String type) {
         this.type = type;
     }
+
 
     //getters
     public String getPersonnr () {
@@ -56,10 +60,6 @@ public class Motor {
     public String getKjennetegn () {
         return kjennetegn;
     }
-    public String getMerke () {
-        return merke;
-    }
-    public String getType () {
-        return type;
-    }
-}
+    public String getMerke() {return merke;}
+    public String getType(){return type;}
+ }

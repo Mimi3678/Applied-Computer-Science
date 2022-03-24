@@ -6,6 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="spring3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 <header class="headerinfo">
@@ -47,19 +48,11 @@
                     </div>
                     <div class="form-group">
                         <label for="merke">Merke</label>
-                        <select id="merke" name="valgtCar">
-                            <option>Toyota</option>
-                            <option>Tesla</option>
-                            <option>Audi</option>
-                        </select>
+                        <div id="merke" class="dropdown"></div>
                     </div>
                     <div class="form-group">
                         <label for="type">Type</label>
-                        <select id="type" name="valgtCar">
-                            <option>B5</option>
-                            <option>Xs4</option>
-                            <option>A9</option>
-                        </select>
+                        <div id="type" class="dropdown"></div>
                     </div>
                 </form>
                 <button class="btn btn-primary" onclick="registrerBil()">Registrer</button>
@@ -72,7 +65,6 @@
         </div>
     </div>
     <script src="spring3.js"></script>
-    <script src="hentCars.js"></script>
 
 </body>
 </html>

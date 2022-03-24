@@ -7,7 +7,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class carController {
-    private final List<Motor> alleBil = new ArrayList<>();
+    public final List<Motor> alleBil = new ArrayList<>();
+    public final List<Cars> carsRegisterd = new ArrayList<>();
+
+    public carController() {
+        Cars car1 = new Cars("Toyota", "B5");
+        carsRegisterd.add(car1);
+        Cars car2 = new Cars("Toyota", "Xs4");
+        carsRegisterd.add(car2);
+        Cars car3 = new Cars("Audi", "A9");
+        carsRegisterd.add(car3);
+        Cars car4 = new Cars("Audi", "A0");
+        carsRegisterd.add(car4);
+    }
+
+    //trenger en ny mapping for å hente disse bilene
+    @GetMapping("/getCars")
+    public List<Cars> hentCars() {
+        return carsRegisterd;
+    }
 
     @PostMapping("/save")
     public void lagremotorvogn (Motor biler) {
@@ -18,14 +36,6 @@ public class carController {
         return alleBil;
     }
 
-    @GetMapping("hentCars")
-    public List<Cars> hentCars() {
-        List<Cars> listCars = new ArrayList<>();
-        listCars.add(new Cars("Toyota", "B5"));
-        listCars.add(new Cars("Tesla", "Xs4"));
-        listCars.add(new Cars("Audi", "A9"));
-        return listCars;
-    }
 
     @GetMapping("deleteAll")
     public void slettAlle() {

@@ -6,26 +6,7 @@
 html,body {
     height: 100%;
 }
-/*Extra small devices (phones, 600px and down)*/
-@media only screen and (max-width: 600px) {
 
-}
-
-
-/*Small devices (portraits tablets and large phones, 600px and up)*/
-@media only screen and (min-width: 600px) {
-
-}
-
-
-/*Medium devices (landscape tablets, 768px and up)*/
-@media only screen and (min-width: 768px) {
-
-}
-
-
-/*Large devices (laptops/desktops, 992px and up)*/
-@media only screen and (min-width: 992px) {
     .headingIntro {
         text-align: center;
         font-size: 45px;
@@ -72,4 +53,22 @@ html,body {
         padding: 15px;
     }
 
+
+@media all and (max-width: 500px) {
+    body {
+        background-image: linear-gradient(to right, #ebf4f5, #b5c6e0);
+    }
+    .headingIntro {
+        text-align: center;
+        font-size: 45px;
+        font-family: 'Rampart One', cursive;
+    }
+
+    #imagesLink {
+        min-height: 100%;
+        align-content: space-between;
+        padding-bottom: 25px;
+        margin: 25px;
+        text-align: center;
+    }
 }

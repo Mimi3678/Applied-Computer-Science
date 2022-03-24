@@ -10,7 +10,7 @@ public class Cars {
         this.type = type;
     }
 
-    //lage en tom konstruktør
+    //lage en tom konstruktør, dette er et krav
     public Cars() {
     }
 
