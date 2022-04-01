@@ -49,7 +49,7 @@ function formaterData(biler) {
 
 //Delete Button
 function slettMotorvogn() {
-    $.get ("/slettAlle", function() {
+    $.get ("/sletAlle", function() {
         hentAlle();
     });
 

@@ -1,17 +1,17 @@
 package com.mimidev.webprograming.spring3;
 
-public class Cars {
+public class Car {
     private String merke;
     private String type;
 
     //lage konstruktør
-    public Cars(String merke, String type) {
+    public Car(String merke, String type) {
         this.merke = merke;
         this.type = type;
     }
 
     //lage en tom konstruktør, dette er et krav
-    public Cars() {
+    public Car() {
     }
 
     //get og set metoder

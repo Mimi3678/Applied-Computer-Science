@@ -14,7 +14,7 @@ function registrerBil() {
 
     //sende det til server
     //lagre informasjon POST (hente alle objekter som er lagret inn på server)
-    $.post("/save", motorvogn, function () {
+    $.post("/savAll", motorvogn, function () {
         hentAlle();
     });
 
@@ -28,7 +28,7 @@ function registrerBil() {
 }
 //implementere hentInformasjon som funksjon, fra server GET
 function hentAlle() {
-    $.get("/getAll", function(biler) {
+    $.get("/fetchAll", function(biler) {
         formaterData(biler);
     });
 }
@@ -50,7 +50,7 @@ function formaterData(biler) {
 
 //Delete Button
 function slettBil() {
-    $.get ("/deleteAll", function() {
+    $.get ("/delAll", function() {
         hentAlle();
     });
 

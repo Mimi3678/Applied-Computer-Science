@@ -13,16 +13,16 @@ public class motorController {
     private final List<Motorvogn> alleBil = new ArrayList<>();
 
     @PostMapping("/lagre")
-    public void lagremotorvogn (Motorvogn bil) {
+    public void lagmotorvogn (Motorvogn bil) {
         alleBil.add(bil);
     }
     @GetMapping("/hentAlle")
-    public List<Motorvogn> hentAlle() {
+    public List<Motorvogn> henAlle() {
         return alleBil;
     }
 
-    @GetMapping("slettAlle")
-    public void slettAlle() {
+    @GetMapping("sletAlle")
+    public void sletAlle() {
         alleBil.clear();
     }
 }

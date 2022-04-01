@@ -11,17 +11,17 @@ import java.util.List;
 public class bilController {
     private final List<Bil> alleBil = new ArrayList<>();
 
-    @PostMapping("/save")
-    public void lagremotorvogn (Bil biler) {
+    @PostMapping("/savAll")
+    public void henteMotorvogn (Bil biler) {
         alleBil.add(biler);
     }
-    @GetMapping("/getAll")
-    public List<Bil> hentAlle() {
+    @GetMapping("/fetchAll")
+    public List<Bil> henteAlle() {
         return alleBil;
     }
 
-    @GetMapping("deleteAll")
-    public void slettAlle() {
+    @GetMapping("delAll")
+    public void dropAlle() {
         alleBil.clear();
     }
 }

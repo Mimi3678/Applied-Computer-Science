@@ -10,6 +10,7 @@ function hentAlleCars() {
     });
 }
 
+//funksjonalitet for å bygge dropdown meny for bil-merke
 function formaterCars(cars) {
     let ut = "<select id='valgtMerke' onchange='finnTyper()'>"
     let forrigeMerke = "";
@@ -17,10 +18,10 @@ function formaterCars(cars) {
 
     for(const car of cars) {
         //lage en sjekk
-        if(car.merke !== forrigeMerke) {
-            ut += "<option>" +bil.merke+ "</option>";
+        if(car.merke != forrigeMerke) {
+            ut += "<option>" +car.merke+ "</option>";
         }
-        forrigeMerke = bil.merke;
+        forrigeMerke = car.merke;
     }
     ut += "</select>";
     $("#merke").html(ut);
@@ -33,7 +34,7 @@ function finnTyper() {
     });
 }
 
-function formaterTyper(biler, valgtMerke) {
+function formaterTyper(cars, valgtMerke) {
     let ut = "<select id='valgtType'>";
     for (const car of cars) {
         if(car.merke === valgtMerke) {
@@ -82,13 +83,11 @@ function hentAlle() {
 }
 
 function formaterData(cars) {
-    let ut = "<table class='table table-striped'>" +
-        "<tr>" +
-        "<th>Personnummer</th><th>Navn</th><th>Adresse</th>" +
+    let ut = "<table class='table table-striped'>" + "<tr>" + "<th>Personnummer</th><th>Navn</th><th>Adresse</th>" +
         "<th>Kjennetegn</th><th>Merke</th><th>Type</th></tr>";
     for (const car of cars) {
-        ut += "<tr><td> "+ cars.personnr +" </td><td> "+ cars.navn +"  </td><td> "+ cars.adresse +" </td>" +
-            " <td> "+ cars.kjennetegn +" </td><td> "+ cars.merke +" </td><td> " + cars.type +" </td></tr>";
+        ut += "<tr><td> "+ car.personnr +" </td><td> "+ car.navn +"  </td><td> "+ car.adresse +" </td>" +
+            " <td> "+ car.kjennetegn +" </td><td> "+ car.merke +" </td><td> " + car.type +" </td></tr>";
     }
     ut += "</table>";
     $("#bileneR").html(ut);
