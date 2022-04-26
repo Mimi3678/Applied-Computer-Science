@@ -1,4 +1,4 @@
-insert into Cars(brand, type)
+INSERT INTO Cars(brand, type)
 values  ('Volvo','V30'),
         ('Volvo','V70'),
         ('Volvo','V91'),
@@ -10,6 +10,6 @@ values  ('Volvo','V30'),
         ('Toyota','Levin');
 
 -- demo to debug button
-insert into Registrations(ssn, name, address, characteristics, brand, type)
+INSERT INTO Registrations(ssn, name, address, characteristics, brand, type)
 values   ('12345678901', 'Miriam', 'Oslot 6', 'AB12345', 'Toyota', 'A8'),
          ('09876543210', 'Nana', 'Osloveien 8', 'A12345', 'Toyota', 'F5');

@@ -15,14 +15,58 @@ import java.util.List;
 
 @RestController
 public class VehicleController {
+    @Autowired
+    private VehicleRepository rep;
+
+    //hente alle biler
+    @GetMapping("/getAllCars")
+    public List<Vehicle> getCars() {
+        return rep.getAllCars();
+    }
+
+    //lagre
+    @PostMapping("/saveRegistrations")
+    public void saveClient(Registration registration){
+        rep.saveRegistrations(registration);
+    }
+
+    //hente alle registrations
+    @GetMapping("/getRegistrations")
+    public List<Registration> getAllRegistrations(){
+        return rep.getAllRegistrations();
+    }
+
+    //hente en og en registrations oppgave 2
+    @GetMapping("/getOneRegistration")
+    public Registration getOneRegistration(int id){
+        return rep.getOneRegistration(id);
+    }
+
+    //for å endre
+    @PostMapping("/change")
+    public void change(Registration registration){
+        rep.changeRegistration(registration);
+    }
+
+    //Oppgave 2 - slette en og en
+    @GetMapping("/deleteOneRegistration")
+    public void slettEnMotorvogn(long ssn){
+        rep.deleteSingleRegistration(ssn);
+    }
+
+    //slette alle
+    @DeleteMapping("/deleteRegistrations")
+    public void deleteAllVehicles(){
+        rep.deleteVehicles();
+    }
+
+
+    /*
 
         @Autowired
         VehicleRepository repo;
 
-        @PostMapping("/api")
-        public void add(Registration registration){
-            repo.addRegistrations(registration);
-        }
+
 
         @GetMapping("/api/registrations")
         public List<Registration> getAllRegistrations(){
@@ -40,8 +84,7 @@ public class VehicleController {
             repo.deleteSingleRegistration(id);
         }
 
-        @DeleteMapping("/api")
-        public void deleteAll(){
-            repo.deleteVehicles();
-        }
+
+
+     */
 }

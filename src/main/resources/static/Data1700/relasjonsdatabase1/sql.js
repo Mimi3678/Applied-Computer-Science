@@ -1,4 +1,58 @@
-$(() => {
+$(function(){  // kjøres når dokumentet er ferdig lastet
+    getAllCars();
+});
+
+function getAllCars() {
+    $.get( "/getAllCars", function(vehicles) {
+        formatData(vehicles);
+    });
+}
+
+function formatData(vehicles) {
+    let ut = "<table class='table table-striped'><tr><th>Personnr</th><th>Navn</th><th>Adresse</th>" +
+        "<th>Kjennetegn</th><th>Merke</th><th>Type</th><th></th><th></th></tr>";
+    for (const vehicle of vehicles) {
+        ut += "<tr><td>" + vehicle.ssn + "</td><td>" + vehicle.name + "</td><td>" + vehicle.address + "</td>" +
+            "<td>" + vehicle.characteristics + "</td><td>" + vehicle.brand + "</td><td>" + vehicle.type + "</td>" +
+            "<td> <button class='btn btn-primary' onclick='idTilEndring("+vehicle.id+")'>Endre</button></td>"+
+            "<td> <button class='btn btn-danger' onclick='slettEnMotorvogn("+vehicle.ssn+")'>Slett</button></td>"+
+            "</tr>";
+    }
+    ut += "</table>";
+    $("#list").html(ut);
+}
+
+function idTilEndring(id) {
+    window.location.href = "endreRegistration.html"+id;
+}
+
+function slettEnMotorvogn(ssn) {
+    const url = "/deleteOneRegistration?ssn="+ssn;
+    $.get( url, function() {
+        window.location.href = "/";
+    });
+}
+
+function deleteAll() {
+    $.get( "/deleteRegistrations", function() {
+        getAllCars();
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $(() => {
     $("#register").click(() => {
         const ssn = $("#ssn");
         const name = $("#name");
@@ -51,12 +105,15 @@ const formatList = list => {
     let msg = "";
 
     if (list.length > 0) {
-        msg += "<table class='table table-striped'><tr><th>Personnr</th><th>Navn</th><th>Adresse</th><th>Kjennetegn</th><th>Merke</th><th>Type</th><th></th></tr>"
+        msg += "<table class='table table-striped'><tr><th>Personnr</th><th>Navn</th><th>Adresse</th><th>Kjennetegn</th>" +
+            "<th>Merke</th><th>Type</th><th></th><th></th></tr>"
 
         for (let registration of list) {
             msg += "<tr><td>" + registration.ssn + "</td><td>" + registration.name + "</td><td>" + registration.address + "</td>" +
-                "<td>" + registration.characteristics + "</td><td>" + registration.brand + "</td><td>" + registration.type +
-                "</td><td><button class='btn btn-danger' value='" + registration.id + "' name='tableDeleteOne'>Slett</button></td></tr>"
+                "<td>" + registration.characteristics + "</td><td>" + registration.brand + "</td><td>" + registration.type + "</td>" +
+                "<td> <a class='btn btn-primary' href='endreRegistration.html?id="+registration.id + "'>Endre</a></td>" +
+                "<td> <button class='btn btn-danger' value='" + registration.id + "' name='tableDeleteOne'>Slett</button>" +
+                "</td></tr>"
         }
 
         msg += "</table>";
@@ -130,3 +187,5 @@ const inputval = registration => {
     else if (registration.brand === "") return false
     else return registration.type
 }
+
+ */

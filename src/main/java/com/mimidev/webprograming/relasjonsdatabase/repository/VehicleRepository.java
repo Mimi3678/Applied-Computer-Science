@@ -2,6 +2,8 @@ package com.mimidev.webprograming.relasjonsdatabase.repository;
 
 import com.mimidev.webprograming.relasjonsdatabase.model.Registration;
 import com.mimidev.webprograming.relasjonsdatabase.model.Vehicle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -16,48 +18,50 @@ public class VehicleRepository {
         @Autowired
         private JdbcTemplate db;
 
-        public void addRegistrations(Registration reg){
-            try {
-                     db.update("insert into Registrations(ssn, name, address, characteristics, brand, type) VALUES (?, ?, ?,?,?,?)",
-                             reg.getSsn(), reg.getName(), reg.getAddress(), reg.getCharacteristics(), reg.getBrand(),
-                reg.getType());
-            } catch (Exception e) {
-                System.out.println("Noe gikk glat i repo sin addRegistrations");
-            }
+        private Logger logger = LoggerFactory.getLogger(VehicleRepository.class);
+
+        public void saveRegistrations(Registration reg){
+            String sql = "INSERT INTO Registrations(ssn, name, address, characteristics, brand, type) VALUES (?, ?, ?,?,?,?)";
+             db.update(sql, reg.getSsn(), reg.getName(), reg.getAddress(), reg.getCharacteristics(), reg.getBrand(),
+                     reg.getType());
         }
 
-        public List<Registration> getRegistrations(){
-            try {
-                return db.query("select * from Registrations", new BeanPropertyRowMapper<>(Registration.class));
-            } catch (Exception e) {
-                System.out.println("Noe gikk glat i repo sin getRegistration");
-                return null;
-            }
+        //hente alle registrations
+        public List<Registration> getAllRegistrations(){
+            String sql = "SELECT * FROM Registrations";
+            return db.query(sql, new BeanPropertyRowMapper(Registration.class));
         }
 
-        public List<Vehicle> getCars() {
-            try {
-                return db.query("select * from Cars", new BeanPropertyRowMapper<>(Vehicle.class));
-            } catch (Exception e) {
-                System.out.println("Noe gikk glat i repo sin getCars");
-                return null;
-            }
+        /* hente en og en registrations*/
+        public Registration getOneRegistration (int id) {
+            String sql = "SELECT * FROM Registrations WHERE id=?";
+           List<Registration> OneRegistration = db.query(sql, new BeanPropertyRowMapper(Registration.class), id);
+            return OneRegistration.get(0);
         }
 
-        //Oppgave 2
-        public void deleteSingleRegistration(String id) {
-            try {
-                db.update("delete from Registrations where id = ?", id);
-            } catch (Exception e) {
-                System.out.println("Noe gikk glat i repo sin deleteSingleRegistration");
-            }
+        //hente alle biler
+        public List<Vehicle> getAllCars() {
+            String sql = "SELECT * FROM Cars";
+            return db.query(sql, new BeanPropertyRowMapper(Vehicle.class));
         }
 
+
+        //endre oppgave 2
+    public void changeRegistration(Registration reg){
+        String sql = "UPDATE Registrations SET ssn=?, name=?,address=?, characteristics =?, brand=?,type=? where id=?";
+        db.update(sql,reg.getSsn(), reg.getName(), reg.getAddress(), reg.getCharacteristics(), reg.getBrand(),
+                reg.getType(),reg.getId());
+    }
+
+        //Oppgave 2 - slette en og en registration
+        public void deleteSingleRegistration(long ssn) {
+            String sql = "DELETE FROM Registrations WHERE ssn=?";
+            db.update(sql, ssn);
+        }
+
+        //slette alle
         public void deleteVehicles(){
-            try {
-                db.update("delete from Registrations");
-            } catch (Exception e) {
-                System.out.println("Noe gikk glat i repo sin deleteVehicles");
-            }
+            String sql = "DELETE FROM Registration";
+            db.update(sql);
         }
 }

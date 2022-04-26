@@ -26,50 +26,16 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
-            <h1>Motorvognregister</h1>
-
-            <form>
-                <div class="form-group">
-                    <label for="ssn">Eiers personnummer</label>
-                    <input class="form-control" type="text" id="ssn"/>
-                </div>
-                <div class="form-group">
-                    <label for="name">Eiers navn</label>
-                    <input class="form-control" type="text" id="name"/>
-                </div>
-                <div class="form-group">
-                    <label for="address">Eiers adresse</label>
-                    <input class="form-control" type="text" id="address"/>
-                </div>
-                <div class="form-group">
-                    <label for="characteristics">Kjennetegn</label>
-                    <input class="form-control" type="text" id="characteristics"/>
-                </div>
-                <div class="form-group">
-                    <label for="brand">Bilmerke</label>
-                    <div class="dropdown" id="brand"></div>
-                </div>
-                <div class="form-group">
-                    <label for="type">Biltype</label>
-                    <div class="dropdown" id="type"></div>
-                </div>
-            </form>
-
-            <button class="btn btn-primary" id="register">Registrer</button>
-            <button class="btn btn-danger" id="deleteAll">Slett alle</button>
-
-        </div>
-
         <div class="col-md-8">
             <h3>Alle bilene</h3>
-
-            <div class="table-response" id="list"></div>
-
+            <div class="table-responsive" id="list"></div>
+            <a href="registrere.html" class="btn btn-primary">Registrere</a>
+            <button class="btn btn-danger" onclick="deleteAll()">Slett alle</button>
         </div>
     </div>
 </div>
 <script src="sql.js"></script>
-
+<br/> <br/>
+    <span>Har innført en ID på Motorvognregisterert som er primærnøkkel istedenfor personnr</span>
 </body>
 </html>
