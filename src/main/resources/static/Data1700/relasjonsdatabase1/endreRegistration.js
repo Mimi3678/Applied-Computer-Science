@@ -43,8 +43,8 @@ function formatTypes(cars,choosenBrand){
 }
 
 function getOneRegistration(){
-   const id = window.location.search.substring(1); // kommer fra kallet i index.js
-   const url = "/getOneRegistration?id="+id;
+   const id = window.location.search.substring(1); // kommer fra kallet i sql.js
+   const url = "/getOneRegistration?"+id;
    $.get( url, function(oneRegistration) {
       // overfør til input-feltene i skjemaet
       $("#id").val(oneRegistration.id); // må ha med denne for å vite hvilken id
@@ -70,5 +70,5 @@ function ChangeRegistration() {
    $.post("/change", registration, function(){
    });
 
-   window.location.href="/";
+   window.location.href="sql.html";
 }

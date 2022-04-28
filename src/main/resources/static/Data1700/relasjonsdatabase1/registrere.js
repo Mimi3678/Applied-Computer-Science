@@ -3,7 +3,7 @@ $(function(){  // kjøres når dokumentet er ferdig lastet
 });
 
 function getAllCars() {
-    $.get( "/getRegistrations", function( cars ) {
+    $.get( "/getAllCars", function( cars ) {
         formatCars(cars);
     });
 }
@@ -50,7 +50,7 @@ function RegisterCars() {
         type : $("#choosenType").val(),
     };
     $.post("/saveRegistrations", vehicle, function(){
-        getAllCars();
+        getAllRegistrations();
     });
     window.location.href = "sql.html";
 }

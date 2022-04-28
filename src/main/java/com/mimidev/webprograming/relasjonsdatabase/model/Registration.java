@@ -2,14 +2,14 @@ package com.mimidev.webprograming.relasjonsdatabase.model;
 
 public class Registration {
     private int id;
-    private int ssn;
+    private long ssn;
     private String name;
     private String address;
     private String characteristics;
     private String brand;
     private String type;
 
-    public Registration(int id, int ssn, String name, String address, String characteristics, String brand, String type) {
+    public Registration(int id, long ssn, String name, String address, String characteristics, String brand, String type) {
         this.id = id;
         this.ssn = ssn;
         this.name = name;
@@ -26,11 +26,11 @@ public class Registration {
 
     public void setId(int id) {this.id = id;}
 
-    public int getSsn() {
+    public long getSsn() {
         return ssn;
     }
 
-    public void setSsn(int ssn) {
+    public void setSsn(long ssn) {
         this.ssn = ssn;
     }
 

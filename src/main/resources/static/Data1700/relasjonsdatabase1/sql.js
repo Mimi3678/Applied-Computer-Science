@@ -1,41 +1,45 @@
 $(function(){  // kjøres når dokumentet er ferdig lastet
-    getAllCars();
+    getAllRegistrations(); //hente alle registreringene
 });
 
-function getAllCars() {
-    $.get( "/getAllCars", function(vehicles) {
-        formatData(vehicles);
+//henter alle
+function getAllRegistrations() {
+    $.get( "/getRegistrations", function(cars) {
+        formatData(cars);
     });
 }
 
-function formatData(vehicles) {
+function formatData(cars) {
     let ut = "<table class='table table-striped'><tr><th>Personnr</th><th>Navn</th><th>Adresse</th>" +
         "<th>Kjennetegn</th><th>Merke</th><th>Type</th><th></th><th></th></tr>";
-    for (const vehicle of vehicles) {
-        ut += "<tr><td>" + vehicle.ssn + "</td><td>" + vehicle.name + "</td><td>" + vehicle.address + "</td>" +
-            "<td>" + vehicle.characteristics + "</td><td>" + vehicle.brand + "</td><td>" + vehicle.type + "</td>" +
-            "<td> <button class='btn btn-primary' onclick='idTilEndring("+vehicle.id+")'>Endre</button></td>"+
-            "<td> <button class='btn btn-danger' onclick='slettEnMotorvogn("+vehicle.ssn+")'>Slett</button></td>"+
+    for (const car of cars) {
+        ut += "<tr><td>" + car.ssn + "</td><td>" + car.name + "</td><td>" + car.address + "</td>" +
+            "<td>" + car.characteristics + "</td><td>" + car.brand + "</td><td>" + car.type + "</td>" +
+            "<td> <a class='btn btn-primary' href='endreRegistration.html?id="+car.id+"'>Endre</a></td>"+
+            /*"<td> <button class='btn btn-primary' onclick='idToChange("+car.id+")'>Endre</button></td>"+*/
+            "<td> <button class='btn btn-danger' onclick='deleteOneRegistration("+car.id+")'>Slett</button></td>"+
             "</tr>";
     }
     ut += "</table>";
-    $("#list").html(ut);
+    $("#cars").html(ut);
 }
 
-function idTilEndring(id) {
-    window.location.href = "endreRegistration.html"+id;
-}
+/* "<td> <button class='btn btn-primary' onclick='idTilEndring("+bil.id+")'>Endre</button></td>"+ */
 
-function slettEnMotorvogn(ssn) {
-    const url = "/deleteOneRegistration?ssn="+ssn;
+/*function idToChange(id) {
+    window.location.href = "/endreRegistration.html?"+id;
+}*/
+
+function deleteOneRegistration(id) {
+    const url = "/deleteOneRegistration?ssn="+id;
     $.get( url, function() {
-        window.location.href = "/";
+        window.location.href = "/"; //gjør at window refresher, så vi ser at det sletter
     });
 }
 
 function deleteAll() {
     $.get( "/deleteRegistrations", function() {
-        getAllCars();
+        getAllRegistrations();
     });
 }
 

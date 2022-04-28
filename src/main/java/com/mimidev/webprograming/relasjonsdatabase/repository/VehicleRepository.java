@@ -61,7 +61,7 @@ public class VehicleRepository {
 
         //slette alle
         public void deleteVehicles(){
-            String sql = "DELETE FROM Registration";
+            String sql = "DELETE FROM Registrations";
             db.update(sql);
         }
 }

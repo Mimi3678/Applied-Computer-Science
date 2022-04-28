@@ -50,7 +50,7 @@ public class VehicleController {
 
     //Oppgave 2 - slette en og en
     @GetMapping("/deleteOneRegistration")
-    public void slettEnMotorvogn(long ssn){
+    public void deleteOneRegistration(long ssn){
         rep.deleteSingleRegistration(ssn);
     }
 
